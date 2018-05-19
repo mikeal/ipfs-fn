@@ -37,8 +37,10 @@ module.exports = fn('/gharchive/', async api => {
 #### Storage
 
 - /gharchive
-  /.gharchive.fn/${functionName}/${desthash}.json
-  /.gharchive.fn/${functionName}/${sourcehash}.json
+- /.gharchive.fn/
+  - ${functionName}
+    - ${desthash}.json
+    - ${sourcehash}.json
   
 ### CLI
 
