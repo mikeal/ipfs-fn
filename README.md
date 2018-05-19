@@ -42,8 +42,10 @@ module.exports = fn('/gharchive/', async api => {
   
 ### CLI
 
+```
 fn file.js ipfs://destination/gharchive // grabs functionName from filename.
 fn --force                              // re-runs transforms and writes new files.
 fn --concurrency=4                      // number of transforms to run at a time.
 fn --clear functionName                 // cleans cached metadata for functionName
 fn --test                               // don't write output files, just give information about the files being written
+```
