@@ -18,19 +18,20 @@ When any file in a directory changes, the directory hash will change and directo
 
 let fn = require('ipfs-fn')
 
-module.exports = fn('/gharchive/*.json.gz', async api => {
+/* operates on every file in the /gharchive/ directory */
+module.exports = fn('/gharchive/', async api => {
   api.file // source file from ipfs
-  api.createFile('/gharchive/filename-meta.csv') // get new file wrapper
-  /* The service stores meta information about the file 
-     that associates it with the current service instance 
+  let stream = await api.createFile('/gharchive/filename-meta.csv')
+  /* The service stores meta information about the file
+     that associates it with the current service instance
      including the hash, and with the source files hash.
   */
 })
 
 /* Directories */
-module.exports = fn('/gharchive/', async api => {
+module.exports = fn.dir('/gharchive/', async api => {
   api.files // source files from ipfs
-  api.createFile('/gharchive/filename-meta-summary.csv') // get new file wrapper
+  let stream = await api.createFile('/gharchive/filename-meta-summary.csv')
 })
 ```
 
@@ -41,7 +42,7 @@ module.exports = fn('/gharchive/', async api => {
   - ${functionName}
     - ${desthash}.json
     - ${sourcehash}.json
-  
+
 ### CLI
 
 ```

@@ -1,0 +1,28 @@
+{
+  "name": "ipfs-fn",
+  "version": "0.1.0",
+  "description": "Functional transforms for ipfs files.",
+  "main": "index.js",
+  "dependencies": {
+    "ipfs-api": "^21.0.0"
+  },
+  "devDependencies": {
+    "bl": "^2.0.0",
+    "csv-write-stream": "^2.0.0",
+    "json-stream": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeal/ipfs-fn.git"
+  },
+  "keywords": [],
+  "author": "Mikeal Rogers <mikeal.rogers@gmail.com> (http://www.mikealrogers.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mikeal/ipfs-fn/issues"
+  },
+  "homepage": "https://github.com/mikeal/ipfs-fn#readme"
+}
